@@ -1,7 +1,8 @@
 Package.describe({
+	name: 'bespintech:meteor-codemirror',
 	summary: "CodeMirror editor for Meteor >= 1.0",
-	version: "1.2.8",
-	git: "https://github.com/perak/codemirror.git"
+	version: "1.2.9",
+	git: "https://10.1.10.38/honeyb-devs/meteor-codemirror.git"
 });
 
 // Before Meteor 0.9?
@@ -102,6 +103,7 @@ Package.onUse(function (api) {
 	api.add_files('lib/codemirror/mode/htmlmixed/htmlmixed.js', "client");
 	api.add_files('lib/codemirror/mode/http/http.js', "client");
 	api.add_files('lib/codemirror/mode/idl/idl.js', "client");
+	api.add_files('lib/codemirror/mode/irule/irule.js', "client");
 	api.add_files('lib/codemirror/mode/jade/jade.js', "client");
 	api.add_files('lib/codemirror/mode/javascript/javascript.js', "client");
 	api.add_files('lib/codemirror/mode/jinja2/jinja2.js', "client");
@@ -158,6 +160,10 @@ Package.onUse(function (api) {
 	api.add_files('lib/codemirror/mode/yaml/yaml.js', "client");
 	api.add_files('lib/codemirror/mode/z80/z80.js', "client");
 
+
+	api.add_files('lib/codemirror/addon/hint/show-hint.css', "client");
+	api.add_files('lib/codemirror/addon/hint/show-hint.js', "client");
+	api.add_files('lib/codemirror/addon/hint/irule-hint.js', "client");
 
 	// themes
 	api.add_files('lib/codemirror/theme/3024-day.css', "client");
