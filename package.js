@@ -26,8 +26,21 @@ Package.onUse(function (api) {
 	// code
 	api.add_files('lib/codemirror/lib/codemirror.css', "client");
 	api.add_files('lib/codemirror/lib/codemirror.js', "client");
+	api.add_files('lib/codemirror/addon/mode/simple.js', "client");
 	api.export('CodeMirror', "client");
 
+	// common keywords
+	api.add_files('lib/codemirror/mode/irule/irule-words.js', "client");
+	api.export('keywords', "client");
+	api.export('f5keywords', "client");
+	api.export('f5SpecialWords', "client");
+	api.export('functions', "client");
+	api.export('allKeywordsRe', "client");
+	api.export('allSpecialWords', "client");
+	api.export('allFunctionsWords', "client");
+	api.export('tclKeywords', "client");
+	api.export('functionWords', "client");
+	api.export('eventList', "client");
 
 	// component
 	api.add_files('lib/component/component.html', "client");
@@ -43,18 +56,16 @@ Package.onUse(function (api) {
 	api.add_files('lib/codemirror/addon/fold/xml-fold.js', "client");
 
 	// lints
-	api.add_files('lib/codemirror/addon/lint/jsonlint.js', "client");
-	api.add_files('lib/codemirror/addon/lint/jshint.js', "client");
-	api.add_files('lib/codemirror/addon/lint/csslint.js', "client");
-	api.add_files('lib/codemirror/addon/lint/yaml-lint.js', "client");
-	api.export('jsonlint', "client");
-	api.export('JSHINT', "client");
-	api.export('CSSLint', "client");
+	api.add_files('lib/codemirror/addon/lint/irule-lint.js', "client");
+	api.export('lintError', "client");
+	api.export('lintWarning', "client");
+	api.export('iruleLint', "client");
 
 	api.add_files('lib/codemirror/addon/lint/lint.css', "client");
 	api.add_files('lib/codemirror/addon/lint/lint.js', "client");
 	api.add_files('lib/codemirror/addon/lint/json-lint.js', "client");
 	api.add_files('lib/codemirror/addon/lint/javascript-lint.js', "client");
+
 
 	// active line mode
 	api.add_files('lib/codemirror/addon/selection/active-line.js', "client");
@@ -75,7 +86,7 @@ Package.onUse(function (api) {
 	api.add_files('lib/codemirror/mode/htmlembedded/htmlembedded.js', "client");
 	api.add_files('lib/codemirror/mode/htmlmixed/htmlmixed.js', "client");
 	api.add_files('lib/codemirror/mode/http/http.js', "client");
-	api.add_files('lib/codemirror/mode/irule/irule.js', "client");
+	api.add_files('lib/codemirror/mode/irule/irule-simple.js', "client");
 	api.add_files('lib/codemirror/mode/javascript/javascript.js', "client");
 	api.add_files('lib/codemirror/mode/perl/perl.js', "client");
 	api.add_files('lib/codemirror/mode/php/php.js', "client");
@@ -99,6 +110,7 @@ Package.onUse(function (api) {
 	api.add_files('lib/codemirror/theme/ambiance.css', "client");
 	api.add_files('lib/codemirror/theme/base16-dark.css', "client");
 	api.add_files('lib/codemirror/theme/base16-light.css', "client");
+	api.add_files('lib/codemirror/theme/bespin.css', "client");
 	api.add_files('lib/codemirror/theme/blackboard.css', "client");
 	api.add_files('lib/codemirror/theme/cobalt.css', "client");
 	api.add_files('lib/codemirror/theme/eclipse.css', "client");
