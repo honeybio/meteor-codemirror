@@ -67,7 +67,7 @@ Or, if you provided `reactiveVar` you can read session variable:
 ```
 Template.EditorPage.helpers({
 	"getEditorText": function() {
-		return Session.get("varName"); // "varName" is variable name you provided to reactiveVar 
+		return Session.get("varName"); // "varName" is variable name you provided to reactiveVar
 	}
 });
 
@@ -103,132 +103,17 @@ Deal with textarea as you normaly do with textarea, with exception that you cann
 
 Supported modes
 ---------------
-
 ```
-apl
-asterisk
-clike
-clojure
-cobol
-commonlisp
-coffeescript
-css
-cypher
-d
-diff
-django
-dtd
-dylan
-ecl
-eiffel
-erlang
-fortran
-gas
-gfm
-gherkin
-go
-groovy
-haml
-haskell
-haxe
-htmlembedded
-htmlmixed
-http
-idl
-jade
 javascript
-jinja2
-julia
-kotlin
-livescript
-lua
-markdown
-mirc
-mllike
-modelica
-nginx
-ntriples
-octave
-pascal
-pegjs
-perl
-php
-pig
-properties
-puppet
-python
-q
-r
-rpm
-rst
-ruby
-rust
-sass
-scheme
-shell
-sieve
-slim
-smalltalk
-smarty
-smartymixed
-solr
-sparql
-sql
-stex
 tcl
-textile
-tiddlywiki
-tiki
-toml
-tornado
-turtle
-vb
-vbscript
-velocity
-verilog
-xml
-xquery
-yaml
-z80
 ```
 
 
 Supported themes
 ----------------
-
 ```
-3024-day
-3024-night
-ambiance-mobile
-ambiance
-base16-dark
-base16-light
-blackboard
-cobalt
-eclipse
-elegant
-erlang-dark
-lesser-dark
-mbo
-mdn-like
-midnight
-monokai
-neat
-neo
-night
-paraiso-dark
-paraiso-light
-pastel-on-dark
-rubyblue
-solarized
-the-matrix
-tomorrow-night-eighties
-twilight
-vibrant-ink
-xq-dark
-xq-light
+bespin
 ```
-
 
 Supported key bindings
 ----------------------
@@ -243,49 +128,5 @@ Supported "lints"
 -----------------
 
 ```
-javascript
-json
-css
+irule
 ```
-
-Version history
-===============
-
-1.2.5
------
-
-- Included search & replace addon
-
-
-1.2.4
------
-
-- Included "active line mode" addon
-
-
-1.2.3
------
-
-- Added `/addon/mode/overlay.js` required by gfm mode. Thanks to <a href="https://github.com/keyanzhang" target="_blank">Keyan Zhang</a>.
-
-
-1.2.2
------
-
-- `reactiveVar` now gets and sets session variable to/from editor text
-
-
-1.2.1
------
-
-- Fixed minor bug
-
-
-1.2.0
------
-
-- Fixed bug with `reactiveVar` 
-
-
-
-That's it.
